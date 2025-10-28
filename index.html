@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carbon Compass</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image/cacbonfavicon.png?v=3" />
+  <link rel="stylesheet" href="style.css?v=2" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="image/cacbonlogo.png?v=3" alt="Carbon Compass logo" />
+      <div>
+        <h1>Carbon Compass</h1>
+        <p>Upload a file to analysis</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Upload file</h2>
+      <form id="upload-form">
+        <input type="file" id="file-input" name="file" accept=".pdf,.png,.jpg,.jpeg,.txt,.csv" required />
+        <button type="submit" id="calculate-btn" class="btn btn-primary">Calculate</button>
+      </form>
+      <div id="upload-status" class="status"></div>
+      <div id="source-url-wrap" class="hidden" aria-hidden="true" style="display:none">
+        <div>Source URL (Dify):</div>
+        <a id="source-url" href="#" target="_blank"></a>
+      </div>
+    </section>
+
+
+    <section class="card">
+      <h2>Results</h2>
+      <div class="results">
+        <div class="block">
+          <h3>File Information</h3>
+          <div class="grid grid-2">
+            <div class="kv"><div class="label">Origin</div><div id="fi-origin" class="value">—</div></div>
+            <div class="kv"><div class="label">Destination</div><div id="fi-destination" class="value">—</div></div>
+            <div class="kv"><div class="label">Transport Mode</div><div id="fi-mode" class="value">—</div></div>
+            <div class="kv"><div class="label">Weight (kg)</div><div id="fi-weight" class="value">—</div></div>
+            <div class="kv"><div class="label">HS Code</div><div id="fi-hscode" class="value code">—</div></div>
+            <div class="kv full"><div class="label">Product</div><div id="fi-product" class="value">—</div></div>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>CBAM Applicability</h3>
+          <div class="grid grid-3">
+            <div class="kv"><div class="label">Result</div><div id="cbam-result" class="value badge">—</div></div>
+          </div>
+          <div class="notes">
+            <div class="label">Explanation</div>
+            <div id="cbam-explain" class="value">—</div>
+          </div>
+        </div>
+
+        <div class="block">
+          <h3>CBAM Details</h3>
+          <div class="grid grid-3">
+            <div class="kv"><div class="label">Category</div><div id="cbam-category" class="value">—</div></div>
+            <div class="kv"><div class="label">Subtype</div><div id="cbam-subtype" class="value">—</div></div>
+            <div class="kv"><div class="label">Emission Factor (tCO₂e/ton)</div><div id="cbam-emission-factor" class="value">—</div></div>
+            <div class="kv"><div class="label">Weight (ton)</div><div id="cbam-weight-ton" class="value">—</div></div>
+            <div class="kv"><div class="label">Embedded Emission (tCO₂e)</div><div id="cbam-embedded-emission" class="value">—</div></div>
+            <div class="kv highlight-fee"><div class="label">CBAM Fee (EUR)</div><div id="cbam-fee" class="value">—</div></div>
+          </div>
+          <div class="notes">
+            <div class="label">Formula</div>
+            <div id="cbam-formula" class="value code">—</div>
+          </div>
+          <div class="notes">
+            <div class="label">Suggestions</div>
+            <div id="cbam-suggestions" class="outputs-container">—</div>
+          </div>
+          <div class="notes">
+            <div class="label">Best Option</div>
+            <div id="cbam-best-option" class="value">—</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2025 Carbon Compass</small>
+  </footer>
+  <!-- Set API base for static hosting. Leave empty for same-origin dev server. -->
+  <script>window.API_BASE = "";</script>
+  <script src="app.js?v=2"></script>
+</body>
+</html>

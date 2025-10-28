@@ -1,0 +1,12 @@
+{
+  "name": "cacbonsolution",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "python3 build.py"
+  },
+  "dependencies": {
+    "busboy": "1.6.0"
+  }
+}

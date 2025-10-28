@@ -1,0 +1,1 @@
+Python API functions moved here to avoid Vercel route conflicts.
