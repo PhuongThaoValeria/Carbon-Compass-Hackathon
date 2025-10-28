@@ -1,4 +1,5 @@
 🌍 Carbon Compass
+
 Brief Introduction
 Carbon Compass is an AI-powered platform designed to help SMEs exporting to the European Union accurately estimate shipment carbon emissions, calculate CBAM (Carbon Border Adjustment Mechanism) fees, and identify practical strategies to reduce those costs.
 By combining regulatory intelligence with logistics data, the app empowers exporters to make data-driven, sustainable, and cost-efficient trade decisions aligned with EU green compliance standards.
@@ -14,7 +15,7 @@ By combining regulatory intelligence with logistics data, the app empowers expor
 - SME-Focused Design: Simplified, intuitive interface tailored to small and medium-sized exporters.
 
 🧰 Tech Stack / Core Tools
-- AI Engine: Google Vertex AI + Dify LLM for reasoning and emission calculation.
+- AI Engine: TRAE + Dify LLM for reasoning and emission calculation.
 - Frontend Framework: React + Next.js (optimized for speed and interactivity).
 - Backend Framework: Python (FastAPI) for emission logic and data processing.
 - Database & Storage: Google Cloud Storage for dataset management and benchmarks.
