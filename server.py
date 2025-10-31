@@ -44,6 +44,18 @@ def corsify(resp):
 def index():
     return serve_static("index.html")
 
+@app.route("/about.html")
+def about_page():
+    return serve_static("about.html")
+
+@app.route("/cbam.html")
+def cbam_page():
+    return serve_static("cbam.html")
+
+@app.route("/faq.html")
+def faq_page():
+    return serve_static("faq.html")
+
 
 @app.route("/app.js")
 def app_js():
